@@ -1,0 +1,11 @@
+repos:
+- repo: git://github.com/pecigonzalo/pre-commit-terraform-vars
+  rev: 8e947e99c45314397a8caacebefab44d74227b6b
+  hooks:
+  - id: terraform-vars
+- repo: git://github.com/antonbabenko/pre-commit-terraform
+  rev: v1.45.0
+  hooks:
+  - id: terraform_fmt
+  - id: terraform_docs_replace
+  - id: terraform_tfsec
