@@ -58,12 +58,22 @@ output "id" {
   value       = aws_vpc.main.id
 }
 
+output "cidr_block" {
+  description = "The VPC CIDR range"
+  value       = aws_vpc.main.cidr_block
+}
+
 variable "domain_name_servers" {
   type    = list(string)
   default = ["AmazonProvidedDNS"]
 }
 
 data "aws_region" "current" {
+}
+
+output "region" {
+  description = "The VPC region"
+  value       = data.aws_region.current.name
 }
 
 resource "aws_vpc_dhcp_options" "main" {

@@ -52,6 +52,8 @@ No Modules.
 | Name | Description |
 |------|-------------|
 | availability\_zones | Availability zones in use by this VPC configuration |
+| cidr\_block | The VPC CIDR range |
 | id | The VPC ID |
 | name | The VPC name |
+| region | The VPC region |
 | subnets\_private | n/a |
