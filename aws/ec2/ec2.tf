@@ -75,13 +75,7 @@ resource "aws_autoscaling_group" "website" {
 
   min_size         = 0
   max_size         = 8
-  desired_capacity = 0
-
-  lifecycle {
-    ignore_changes = [
-      desired_capacity,
-    ]
-  }
+  desired_capacity = 2
 
   default_cooldown          = 15
   health_check_grace_period = 30
