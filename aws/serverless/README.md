@@ -1,6 +1,6 @@
-# Serverless website
+# Website serverless
 
-Hosting a website in a private S3 bucket fronted by API Gateway.
+Hosting a website in a private S3 bucket behind CloudFront.
 
 ## Requirements
 
@@ -20,8 +20,13 @@ No Modules.
 
 | Name |
 |------|
+| [aws_cloudfront_distribution](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudfront_distribution) |
+| [aws_cloudfront_origin_access_identity](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudfront_origin_access_identity) |
+| [aws_iam_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) |
+| [aws_iam_role_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy) |
 | [aws_s3_bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) |
 | [aws_s3_bucket_object](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_object) |
+| [aws_s3_bucket_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_policy) |
 
 ## Inputs
 
@@ -32,3 +37,5 @@ No Modules.
 
 ## Outputs
 
+| Name | Description |
+|------|-------------|
