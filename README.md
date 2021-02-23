@@ -54,6 +54,7 @@ No provider.
 
 | Name | Source | Version |
 |------|--------|---------|
+| ec2 | ./aws/ec2 |  |
 | serverless | ./aws/serverless |  |
 
 ## Resources
@@ -68,4 +69,4 @@ No input.
 
 | Name | Description |
 |------|-------------|
-| serverless\_url | Serverless deployment |
+| ec2\_url | EC2 deployment |

@@ -68,3 +68,16 @@ output "serverless_url" {
   description = "Serverless deployment"
   value       = module.serverless.url
 }
+
+module "ec2" {
+  source = "./aws/ec2"
+
+  assets = local.assets
+
+  extra_tags = local.extra_tags
+}
+
+output "ec2_url" {
+  description = "EC2 deployment"
+  value       = module.ec2.url
+}

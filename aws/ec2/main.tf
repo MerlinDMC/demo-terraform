@@ -17,8 +17,7 @@ variable "assets" {
 }
 
 output "url" {
-  # TODO: retrieve public endpoint URL when available
-  value = ""
+  value = "http://${aws_lb.website.dns_name}/"
 }
 
 data "aws_availability_zones" "available" {
@@ -32,9 +31,6 @@ variable "availability_zones_count" {
 }
 
 locals {
-  # TODO: remove once assets are being used - this silences the pre-commit hook
-  assets = var.assets
-
   availability_zones = slice(
     data.aws_availability_zones.available.names,
     length(data.aws_availability_zones.available.names) - var.availability_zones_count,
