@@ -70,3 +70,4 @@ No input.
 | Name | Description |
 |------|-------------|
 | ec2\_url | EC2 deployment |
+| serverless\_url | Serverless deployment |
